@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/hella_Portfolio/static/css/main.1ff5ab45.css",
+    "main.js": "/hella_Portfolio/static/js/main.08a71a7c.js",
+    "static/js/453.555e4ffa.chunk.js": "/hella_Portfolio/static/js/453.555e4ffa.chunk.js",
+    "static/media/sound3.mp3": "/hella_Portfolio/static/media/sound3.99aa385c69c682259661.mp3",
+    "static/media/sound4.mp3": "/hella_Portfolio/static/media/sound4.dc5a8b490434e47dc6b2.mp3",
+    "static/media/sound1.mp3": "/hella_Portfolio/static/media/sound1.1950935db2f39ad8f1ce.mp3",
+    "static/media/sound.mp3": "/hella_Portfolio/static/media/sound.8658c61d789566dce248.mp3",
+    "static/media/2.png": "/hella_Portfolio/static/media/2.2bbb6d09606f9a4c56c2.png",
+    "static/media/sound2.mp3": "/hella_Portfolio/static/media/sound2.72f5abe48ca79bf4814a.mp3",
+    "static/media/bike.png": "/hella_Portfolio/static/media/bike.400dca1c38941d673d56.png",
+    "static/media/olx.png": "/hella_Portfolio/static/media/olx.523d2ad811413c0867d0.png",
+    "static/media/nike.png": "/hella_Portfolio/static/media/nike.29a49b2e0d8501d19355.png",
+    "static/media/phone2.png": "/hella_Portfolio/static/media/phone2.760231cd643aaed0beae.png",
+    "static/media/bank.png": "/hella_Portfolio/static/media/bank.4bc02f0a4ac9f83c95cc.png",
+    "static/media/Resume.pdf": "/hella_Portfolio/static/media/Resume.d6f0749476fd7b960734.pdf",
+    "static/media/hella.jpg": "/hella_Portfolio/static/media/hella.aca63c70c20a4410f566.jpg",
+    "static/media/tg-bot.png": "/hella_Portfolio/static/media/tg-bot.7dca7f1187200e008c5c.png",
+    "static/media/telegram.png": "/hella_Portfolio/static/media/telegram.f36528d9390a0414b401.png",
+    "static/media/github.png": "/hella_Portfolio/static/media/github.6f40dd57fa4e5cee2cea.png",
+    "static/media/email.png": "/hella_Portfolio/static/media/email.cb392634839fbe479f91.png",
+    "static/media/lindedin.png": "/hella_Portfolio/static/media/lindedin.16911adb36e92af2a52d.png",
+    "index.html": "/hella_Portfolio/index.html",
+    "main.1ff5ab45.css.map": "/hella_Portfolio/static/css/main.1ff5ab45.css.map",
+    "main.08a71a7c.js.map": "/hella_Portfolio/static/js/main.08a71a7c.js.map",
+    "453.555e4ffa.chunk.js.map": "/hella_Portfolio/static/js/453.555e4ffa.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1ff5ab45.css",
+    "static/js/main.08a71a7c.js"
+  ]
+}
