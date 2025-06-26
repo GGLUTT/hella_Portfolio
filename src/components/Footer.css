@@ -1,0 +1,49 @@
+.footer {
+  position: relative;
+  width: 100%;
+  height: 120px;
+  background: transparent;
+  backdrop-filter: blur(15px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-parallax {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.footer-scroller {
+  display: flex;
+  white-space: nowrap;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 2.25rem;
+  font-weight: bold;
+  letter-spacing: -0.02em;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.1));
+  color: #333;
+}
+
+.footer-text {
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    height: 150px;
+  }
+  
+  .footer-scroller {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+}
+
+/* Dark theme support */
+[data-theme="dark"] .footer-scroller {
+  color: #fff;
+}

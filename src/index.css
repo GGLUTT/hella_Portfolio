@@ -5,9 +5,91 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Приховуємо стандартні скроли */
+  overflow-x: hidden;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+/* Приховуємо скроли для WebKit браузерів */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Глобальне приховування скролів для всіх елементів */
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+*::-webkit-scrollbar {
+  display: none;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Існуючі стилі... */
+
+/* Глобальні CSS змінні для тем */
+:root {
+  /* Світла тема (за замовчуванням) */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --text-primary: #212529;
+  --text-secondary: #6c757d;
+  --border-color: #dee2e6;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --accent-color: #667eea;
+}
+
+[data-theme="dark"], .dark-theme {
+  /* Темна тема */
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #2d2d2d;
+  --text-primary: #ffffff;
+  --text-secondary: #b0b0b0;
+  --border-color: #404040;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --accent-color: #764ba2;
+}
+
+/* Плавні переходи для зміни теми */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Застосування змінних до основних елементів */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.App {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Стилі для компонентів з урахуванням теми */
+.audio-player {
+  background: var(--bg-secondary) !important;
+  border-color: var(--border-color) !important;
+  box-shadow: 0 8px 32px var(--shadow-color) !important;
+}
+
+.desktop {
+  background-color: var(--bg-primary);
+}
+
+.window {
+  background-color: var(--bg-secondary);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+.dock {
+  background-color: var(--bg-secondary);
+  border-color: var(--border-color);
 }

@@ -1,38 +1,183 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background: #000;
   color: white;
+  position: relative;
+  min-height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+/* Глобальний фоновий шар */
+.global-background-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Оновлюємо z-index для контенту */
+.main-content,
+.experience-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  transition: opacity 1s ease-out;
+}
+
+.loader-wrapper.fade-out {
+  opacity: 0;
+}
+
+.main-content {
+  min-height: 100vh;
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+.main-content.fade-in {
+  opacity: 1;
+}
+
+.experience-wrapper {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+.experience-wrapper.fade-in {
+  opacity: 1;
+}
+
+.content-overlay {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Стилі для закріпленої ProfileCard */
+.fixed-profile-card {
+  position: fixed;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  z-index: 1000;
+  transition: all 0.3s ease;
+  animation: slideInFromRight 1s ease-out 0.5s both;
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateY(-50%) translateX(100%);
+    opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform: translateY(-50%) translateX(0);
+    opacity: 1;
   }
 }
+
+.fixed-profile-card .main-profile-card {
+  width: 280px;
+  max-width: 280px;
+}
+
+.fixed-profile-card .pc-card {
+  height: 400px;
+  max-height: 400px;
+  box-shadow: 
+    0 25px 50px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(102, 126, 234, 0.3);
+}
+
+/* Hover ефект для закріпленої картки */
+.fixed-profile-card:hover {
+  transform: translateY(-50%) scale(1.05);
+}
+
+.fixed-profile-card:hover .pc-card {
+  box-shadow: 
+    0 35px 70px rgba(0, 0, 0, 0.6),
+    0 0 50px rgba(102, 126, 234, 0.5);
+}
+
+/* Адаптивність для мобільних пристроїв */
+@media (max-width: 1200px) {
+  .fixed-profile-card {
+    right: 20px;
+  }
+  
+  .fixed-profile-card .main-profile-card {
+    width: 250px;
+    max-width: 250px;
+  }
+  
+  .fixed-profile-card .pc-card {
+    height: 350px;
+    max-height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .fixed-profile-card {
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
+    margin: 20px auto;
+    animation: slideInFromBottom 1s ease-out 0.5s both;
+  }
+  
+  .fixed-profile-card .main-profile-card {
+    width: 300px;
+    max-width: 90vw;
+  }
+  
+  .fixed-profile-card .pc-card {
+    height: 400px;
+    max-height: 60vh;
+  }
+  
+  .content-overlay {
+    padding-top: 0;
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .fixed-profile-card {
+    margin: 10px auto;
+  }
+  
+  .fixed-profile-card .main-profile-card {
+    width: 280px;
+  }
+  
+  .fixed-profile-card .pc-card {
+    height: 350px;
+    max-height: 55vh;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
